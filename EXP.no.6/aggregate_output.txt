@@ -1,0 +1,37 @@
+TotalEmployees
+--------------
+            10
+TotalSalary
+-----------
+     545000
+AverageSalary
+-------------
+      54500.0
+HighestSalary  LowestSalary
+-------------  ------------
+        75000         35000
+Department  EmpCount
+----------  --------
+Finance            3
+HR                 3
+IT                 4
+Department      AvgSalary
+----------  ------------------
+IT                     61750.0
+Finance                54000.0
+HR          45333.333333333336
+Department  EmpCount
+----------  --------
+IT                 4
+Department  AvgSalary
+----------  ---------
+Finance       54000.0
+IT            61750.0
+Department   City    EmpCount
+----------  -------  --------
+IT          Chennai         2
+  City     TotalSalary
+---------  -----------
+Bangalore       206000
+Chennai         211000
+Mumbai          128000
