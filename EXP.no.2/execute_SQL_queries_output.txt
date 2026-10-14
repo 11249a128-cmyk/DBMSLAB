@@ -1,0 +1,132 @@
+=== View All Records ===
+EmpID      Name       Department  Salary   JoinDate
+-----  -------------  ----------  ------  ----------
+  101  Anjali Sharma  IT           45000  2023-06-15
+  102  Ravi Kumar     HR           38000  2022-03-10
+  103  Priya Singh    Finance      52000  2021-11-01
+  104  Karthik Iyer   IT           47000  2023-01-20
+
+=== View IT Employees ===
+EmpID      Name       Department  Salary   JoinDate
+-----  -------------  ----------  ------  ----------
+  101  Anjali Sharma  IT           45000  2023-06-15
+  104  Karthik Iyer   IT           47000  2023-01-20
+
+=== View Employees Earning More Than 40000 ===
+    Name       Salary
+-------------  ------
+Anjali Sharma   45000
+Priya Singh     52000
+Karthik Iyer    47000
+
+=== View IT Employees Earning At Least 45000 ===
+EmpID      Name       Department  Salary   JoinDate
+-----  -------------  ----------  ------  ----------
+  101  Anjali Sharma  IT           45000  2023-06-15
+  104  Karthik Iyer   IT           47000  2023-01-20
+
+=== View Employees with Salary Between 40000 and 50000 ===
+EmpID      Name       Department  Salary   JoinDate
+-----  -------------  ----------  ------  ----------
+  101  Anjali Sharma  IT           45000  2023-06-15
+  104  Karthik Iyer   IT           47000  2023-01-20
+
+=== View Employees in IT or Finance ===
+EmpID      Name       Department  Salary   JoinDate
+-----  -------------  ----------  ------  ----------
+  101  Anjali Sharma  IT           45000  2023-06-15
+  103  Priya Singh    Finance      52000  2021-11-01
+  104  Karthik Iyer   IT           47000  2023-01-20
+
+=== View Employees Whose Names Start with A ===
+EmpID      Name       Department  Salary   JoinDate
+-----  -------------  ----------  ------  ----------
+  101  Anjali Sharma  IT           45000  2023-06-15
+
+=== Sort IT Employees by Salary in Descending Order ===
+EmpID      Name       Department  Salary   JoinDate
+-----  -------------  ----------  ------  ----------
+  104  Karthik Iyer   IT           47000  2023-01-20
+  101  Anjali Sharma  IT           45000  2023-06-15
+
+=== After Update Salary of Employee 101 ===
+EmpID      Name       Department  Salary   JoinDate
+-----  -------------  ----------  ------  ----------
+  101  Anjali Sharma  IT           48000  2023-06-15
+
+=== After Update IT Employee Salaries and Department ===
+EmpID      Name       Department  Salary   JoinDate
+-----  -------------  ----------  ------  ----------
+  101  Anjali Sharma  Systems      50000  2023-06-15
+  102  Ravi Kumar     HR           38000  2022-03-10
+  103  Priya Singh    Finance      52000  2021-11-01
+  104  Karthik Iyer   Systems      49000  2023-01-20
+
+=== After Delete Employee 102 ===
+EmpID      Name       Department  Salary   JoinDate
+-----  -------------  ----------  ------  ----------
+  101  Anjali Sharma  Systems      50000  2023-06-15
+  103  Priya Singh    Finance      52000  2021-11-01
+  104  Karthik Iyer   Systems      49000  2023-01-20
+
+=== Remaining Employees ===
+EmpID      Name       Department  Salary   JoinDate
+-----  -------------  ----------  ------  ----------
+  101  Anjali Sharma  Systems      50000  2023-06-15
+  103  Priya Singh    Finance      52000  2021-11-01
+  104  Karthik Iyer   Systems      49000  2023-01-20
+
+=== After Adding Email Column ===
+cid     name         type       notnull  dflt_value  pk
+---  ----------  -------------  -------  ----------  --
+  0  EmpID       INT                  0               1
+  1  Name        VARCHAR(50)          0               0
+  2  Department  VARCHAR(30)          0               0
+  3  Salary      DECIMAL(10,2)        0               0
+  4  JoinDate    DATE                 0               0
+  5  Email       VARCHAR(100)         0               0
+
+=== After Modifying Name Column Size ===
+cid     name         type       notnull  dflt_value  pk
+---  ----------  -------------  -------  ----------  --
+  0  EmpID       INT                  0               1
+  1  Name        VARCHAR(80)          0               0
+  2  Department  VARCHAR(30)          0               0
+  3  Salary      DECIMAL(10,2)        0               0
+  4  JoinDate    DATE                 0               0
+  5  Email       VARCHAR(100)         0               0
+
+=== After Renaming Email Column ===
+cid      name          type       notnull  dflt_value  pk
+---  ------------  -------------  -------  ----------  --
+  0  EmpID         INT                  0               1
+  1  Name          VARCHAR(80)          0               0
+  2  Department    VARCHAR(30)          0               0
+  3  Salary        DECIMAL(10,2)        0               0
+  4  JoinDate      DATE                 0               0
+  5  ContactEmail  VARCHAR(100)         0               0
+
+=== After Dropping ContactEmail Column ===
+cid     name         type       notnull  dflt_value  pk
+---  ----------  -------------  -------  ----------  --
+  0  EmpID       INT                  0               1
+  1  Name        VARCHAR(80)          0               0
+  2  Department  VARCHAR(30)          0               0
+  3  Salary      DECIMAL(10,2)        0               0
+  4  JoinDate    DATE                 0               0
+
+=== Final Table Structure (Staff) ===
+cid     name         type       notnull  dflt_value  pk
+---  ----------  -------------  -------  ----------  --
+  0  EmpID       INT                  0               1
+  1  Name        VARCHAR(80)          0               0
+  2  Department  VARCHAR(30)          0               0
+  3  Salary      DECIMAL(10,2)        0               0
+  4  JoinDate    DATE                 0               0
+
+=== Final Records ===
+EmpID      Name       Department  Salary   JoinDate
+-----  -------------  ----------  ------  ----------
+  101  Anjali Sharma  Systems      50000  2023-06-15
+  103  Priya Singh    Finance      52000  2021-11-01
+  104  Karthik Iyer   Systems      49000  2023-01-20
