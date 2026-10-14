@@ -38,5 +38,3 @@
           -- Average CGPA
           SELECT AVG(CGPA) AS AverageCGPA FROM Student;
 
-//OUTPUT :
-       
