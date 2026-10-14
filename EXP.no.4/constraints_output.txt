@@ -1,0 +1,25 @@
+=== Department ===
+dep_id   dept_name
+-------  ----------------
+1        Computer Science
+2        Electronics
+
+=== Student ===
+roll_no   name   age   email             gender          dept_id
+-------  -----  ----  ---------------  --------------  -------
+101      Arun    20    arun@email.com    Male            1
+102      Priya   21    priya@email.com   Not Specified   2
+
+Records with roll_no 101 and 102 insert successfully.
+Record 102 receives gender = 'Not Specified' from the DEFAULT constraint.
+
+Verification of constraints:
+Violation Sample Error Message
+NOT NULL violation Column 'name' cannot be null
+UNIQUE violation Duplicate entry 'arun@email.com' for key 'email'
+PRIMARY KEY violation Duplicate entry '101' for key 'PRIMARY'
+CHECK violation Check constraint 'age' is violated
+FOREIGN KEY violation Cannot add or update a child row: a foreign key constraint fails
+
+=== Final MySQL-style result ===
+The invalid inserts are rejected with errors similar to the messages above, as expected in MySQL.

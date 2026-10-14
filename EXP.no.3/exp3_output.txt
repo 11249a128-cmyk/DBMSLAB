@@ -1,0 +1,37 @@
+=== Initial Records ===
+EmpID  Name   Department  Salary
+-----  -----  ----------  ------
+  101  Arun   HR           35000
+  102  Priya  IT           45000
+  103  Kavin  Finance      50000
+  104  Divya  IT           55000
+
+=== After Update Before Rollback ===
+EmpID  Name   Department  Salary
+-----  -----  ----------  ------
+  101  Arun   HR           35000
+  102  Priya  IT           48000
+  103  Kavin  Finance      50000
+  104  Divya  IT           60000
+
+=== After Rollback to SP1 ===
+EmpID  Name   Department  Salary
+-----  -----  ----------  ------
+  101  Arun   HR           35000
+  102  Priya  IT           48000
+  103  Kavin  Finance      50000
+  104  Divya  IT           60000
+
+=== After Delete Before Rollback ===
+EmpID  Name   Department  Salary
+-----  -----  ----------  ------
+  102  Priya  IT           48000
+  103  Kavin  Finance      50000
+  104  Divya  IT           60000
+
+=== Final Records ===
+EmpID  Name   Department  Salary
+-----  -----  ----------  ------
+  102  Priya  IT           48000
+  103  Kavin  Finance      50000
+  104  Divya  IT           60000

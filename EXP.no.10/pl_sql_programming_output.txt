@@ -1,0 +1,68 @@
+EXP.NO.10 - PL/SQL PROGRAMMING
+Expected Oracle output (Oracle client is not installed; Oracle-only blocks are not executed here)
+
+A) CONDITIONAL BLOCKS
+Program 1.1 - IF-ELSIF:
+ALLEN: Grade B
+
+Program 1.2 - CASE bonus:
+Bonus: 1250
+
+B) EXCEPTION HANDLING
+Program 2.1 - No matching employee:
+No employee with that number.
+
+Program 2.2 - User-defined exception:
+Salary below minimum: 8000
+
+Program 2.3 - Duplicate key:
+ORA-20001: Employee number already exists
+
+C) STORED PROCEDURES
+Program 3.1 - raise_salary(101, 10):
+Employee 101 salary updated and committed.
+
+Program 3.2 - get_emp_info(104):
+JONES earns 29750
+
+Program 3.3 - square_it(7):
+Result: 49
+
+D) STORED FUNCTION
+Program 4.1 - annual_sal(102):
+180000
+
+SELECT ename, annual_sal(empno) AS yearly:
+ENAME  YEARLY
+SMITH  105600
+ALLEN  180000
+WARD   150000
+JONES  357000
+KING   600000
+
+E) TRIGGERS
+Program 5.1 - Attempt to set salary to -100:
+ORA-20010: Salary cannot be negative
+
+Program 5.2 - Audit rows generated before ROLLBACK:
+AUDIT_ID  EMPNO  ACTION  OLD_SAL  NEW_SAL
+1         101    UPDATE  8800     9000
+2         103    DELETE  12500
+
+The final ROLLBACK undoes these audit-test changes. The earlier salary raise for employee 101 remains committed.
+
+Program 5.3 - Trigger status:
+TRG_CHECK_SAL   ENABLED
+TRG_EMP_AUDIT   ENABLED
+TRG_NO_WEEKEND  ENABLED
+
+F) CURSORS
+Program 6.1 - Implicit cursor:
+2 row(s) updated
+
+Program 6.2 - Explicit cursor (employees ordered by salary descending):
+KING      50000
+JONES     29750
+ALLEN     15000
+WARD      12500
+SMITH     8800

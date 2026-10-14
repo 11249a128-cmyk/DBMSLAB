@@ -1,0 +1,43 @@
+
+UNNORMALIZED TABLE (1NF)
+SID  SName  Course  Faculty  FacultyPhone  Dept  HOD
+S1   Arun   DBMS    Ravi     9990001      CSE   Dr. Sharma
+S1   Arun   OS      Meena    9990002      CSE   Dr. Sharma
+S2   Bala   DBMS    Ravi     9990001      CSE   Dr. Sharma
+
+STUDENT TABLE (2NF)
+SID  SName
+S1   Arun
+S2   Bala
+
+COURSE_FACULTY TABLE (2NF)
+Course  Faculty  FacultyPhone  Dept  HOD
+DBMS    Ravi     9990001      CSE   Dr. Sharma
+OS      Meena    9990002      CSE   Dr. Sharma
+
+ENROLLMENT TABLE (2NF)
+SID  Course
+S1   DBMS
+S1   OS
+S2   DBMS
+
+COURSE_3NF JOIN RESULT
+Course  Faculty  FacultyPhone  Dept  HOD
+DBMS    Ravi     9990001      CSE   Dr. Sharma
+OS      Meena    9990002      CSE   Dr. Sharma
+
+FACULTY_COURSE (4NF)
+Faculty  Course
+Ravi     DBMS
+Ravi     OS
+
+FACULTY_LANGUAGE (4NF)
+Faculty  Language
+Ravi     English
+Ravi     Hindi
+
+5NF RESULT
+Faculty  Course  Textbook
+Ravi     DBMS    Korth
+Ravi     DBMS    Navathe
+Meena    OS      Silberschatz

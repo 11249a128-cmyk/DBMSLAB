@@ -1,0 +1,74 @@
+3.1 Students with department names (INNER JOIN)
+student_id  student_name  dept_name
+----------  ------------  ---------
+       101  Anu           CSE
+       102  Bala          CSE
+       103  Charan        ECE
+       104  Divya         IT
+3.2 All students, including those without a department (LEFT JOIN)
+student_id  student_name  dept_name
+----------  ------------  ---------
+       101  Anu           CSE
+       102  Bala          CSE
+       103  Charan        ECE
+       104  Divya         IT
+       105  Esha
+3.3 All departments and their students (LEFT JOIN)
+dept_id  dept_name  student_name
+-------  ---------  ------------
+     10  CSE        Anu
+     10  CSE        Bala
+     20  ECE        Charan
+     30  IT         Divya
+     40  MECH
+3.4 Students and their enrolled courses
+student_name    course_name    marks
+------------  ---------------  -----
+Anu           DBMS                88
+Anu           Data Structures     91
+Bala          DBMS                76
+Charan        Digital Systems     84
+Divya         Web Technology      95
+3.5 Students who scored more than 80
+student_name    course_name    marks
+------------  ---------------  -----
+Divya         Web Technology      95
+Anu           Data Structures     91
+Anu           DBMS                88
+Charan        Digital Systems     84
+3.6 All departments and matching students (RIGHT JOIN)
+dept_name  student_name
+---------  ------------
+CSE        Anu
+CSE        Bala
+ECE        Charan
+IT         Divya
+MECH
+4.1 Students with CGPA above the overall average
+student_id  student_name  cgpa
+----------  ------------  ----
+       101  Anu            8.7
+       104  Divya          9.1
+4.2 Students in CSE using a subquery
+student_id  student_name
+----------  ------------
+       101  Anu
+       102  Bala
+4.3 Students enrolled in DBMS
+student_id  student_name
+----------  ------------
+       101  Anu
+       102  Bala
+4.4 Courses with credits greater than ANY course in ECE (SQLite equivalent: greater than MIN)
+course_id    course_name    credits
+---------  ---------------  -------
+      501  DBMS                   4
+      502  Data Structures        4
+4.5 Students above their department average CGPA
+student_id  student_name  dept_id  cgpa
+----------  ------------  -------  ----
+       101  Anu                10   8.7
+4.6 Student(s) with the highest CGPA
+student_id  student_name  cgpa
+----------  ------------  ----
+       104  Divya          9.1
